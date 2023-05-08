@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Weather from './components/Weather';
 import HikingTrails from './components/HikingTrails';
+import './App.css';
+
 
 function App() {
   return (
