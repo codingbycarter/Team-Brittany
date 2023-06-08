@@ -59,7 +59,7 @@ JWTs can be stored in localStorage on the frontend, however [this is not encoura
 The frontend achieves user authentication by making a GET request to `/user`, and passing a username and password using the auth header provided 
 by [axios](https://github.com/axios/axios). The backend requires the passed username be an email.
 ```agsl
-      axios.get(LOGIN_URL, {
+      axios.get(LOGIN_URL, { //LOGIN_URL = '/user'
       auth: {
         username: "user@email.com",
         password: "user-password"
@@ -81,8 +81,11 @@ the fields for displayName, email, password and role (which is assigned automati
 }
 ```
 ### Testing 
-Once a user is registered into the database, they will be able to log in using the `/login` link in the nav bar. A successful login will return a page listing the user's ID number, username and email.
+Once a user is registered into the database, they will be able to log in using the `login` link in the nav bar. A successful login will return a page listing the user's ID number, username and email.
+
 A failed login will return `Invalid Credentials` on the login form.
+
+Alternatively you can test with Postman by sending a GET request to the `http://localhost:8080/user` api providing a registered email and password and selecting the `Basic Auth` under the authorization tab.
 
 
 
