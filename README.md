@@ -13,7 +13,7 @@ for the IntelliJ to recognize the Gradle project to run.
    * Create a `.gitignore` file exists in the `\backend` directory folder if one does not exist. 
    * Add the following statement to the bottom of the file:
 
-```agsl
+```gitignore
 ### JWT TOKEN ###
 *src/main/java/com/discovermotrails/securitybackend/constants/SecurityConstants.java
 ```
@@ -24,7 +24,7 @@ for the IntelliJ to recognize the Gradle project to run.
        file and the authorization key inside of it is not tracked.
    * Don't forget to import the `SecurityConstants` class into both the `JWTTokenGeneratorFilter` and `JWTTokenValidatorFilter`
 
-```agsl
+```java
 package com.discovermotrails.securitybackend.constants;
 
 public interface SecurityConstants {
@@ -58,7 +58,7 @@ JWTs can be stored in localStorage on the frontend, however [this is not encoura
 ### Authentication
 The frontend achieves user authentication by making a GET request to `/user`, and passing a username and password using the auth header provided 
 by [axios](https://github.com/axios/axios). The backend requires the passed username be an email.
-```agsl
+```html
       axios.get(LOGIN_URL, { //LOGIN_URL = '/user'
       auth: {
         username: "user@email.com",
@@ -73,7 +73,7 @@ is also established with the JWT.
 ### Registration
 New users to the site can register to log in by making a POST request to `/register`. The body of this request should contain a JSON object containing
 the fields for displayName, email, password and role (which is assigned automatically by the frontend).
-```agsl
+```json
 {
     "displayName": "User-display-name",
     "email": "user@email.com",
@@ -87,6 +87,37 @@ A failed login will return `Invalid Credentials` on the login form.
 
 Alternatively you can test with Postman by sending a GET request to the `http://localhost:8080/user` api providing a registered email and password and selecting the `Basic Auth` under the authorization tab.
 
+## :sunflower: Adding to the React project
 
-
-
+### 1. The Router
+The website's main router is located in `frontend/src/App.js`. 
+1. Import your component 
+2. Define a route to the component inside `function App()` using the following template: `<Route path="[YOUR PATH NAME]" exact element={<[YOUR COMPONENT NAME]/>}`
+3. If your component needs to be behind our authentication wall it needs to be wrapped by a `<Protected></Protected>` component. The code for that looks like this:
+```html
+    <Route 
+      path="/[YOUR SECURED PATH]" 
+      element={
+      <Protected>
+        <[YOUR SECURED COMPONENT] /> 
+      </Protected>
+      }
+    />
+```
+4. Be sure to update the ProjectSecurityConfig.java file in `backend/src/main/java/com.discovermotrails.securitybackend/config`. 
+   * Add secured paths to the comma separated list in the `.requestMatchers("/account","/user", "/secure").authenticated()` method
+   * Add public paths to the comma separated list in the `.requestMatchers("/index", "/register").permitAll()` mehtod
+```java
+                ...
+        .authorizeHttpRequests()
+        .requestMatchers("/account","/user", "/secure").authenticated() // ADD SECURED PATHS HERE
+        .requestMatchers("/index", "/register").permitAll() // ADD PUBLIC PATHS HERE
+        .and().httpBasic();
+        return http.build();
+```
+5. You may also add a link to your component in the header in react. Open the `frontend/src/components/header/header.jsx` file and add a new `<li>` to the `<nav>` like this:
+```html
+    <li>
+        <Link to="[YOUR PATH]">[NAV LINK NAME]</Link>
+    </li>
+```
