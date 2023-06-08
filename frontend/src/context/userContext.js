@@ -19,8 +19,7 @@ export function UserContextProvider({ children }) {
 
     //This hook gets the User item from local storage and sets it in the local memory. Without this the user information won't persist
     useEffect(() => {
-        const data = localStorage.getItem("User");
-        setUser(JSON.parse(data));
+        setUser(USER);
     }, [])
 
     //DIFFERENT from the authentication. This function sets the user information into memory and local storage after successful authentication

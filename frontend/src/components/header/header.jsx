@@ -9,7 +9,7 @@ function Header() {
     const loggedInStatus = () => {
         if (user.isLoggedIn === false) {
             return {
-                path: '/secure',
+                path: '/user',
                 displayText: 'Login',
                 msg: 'You are not logged in',
                 visibleDash: {display: "none"},
@@ -44,7 +44,7 @@ function Header() {
                             <Link to="/Register">Register</Link>
                         </li>
                         <li style={loggedInStatus().visibleDash}>
-                            <Link to='/secure'>Dashboard</Link>
+                            <Link to='/user'>Dashboard</Link>
                         </li>
                         <li>
                             <Link to={loggedInStatus().path}>{loggedInStatus().displayText}</Link>

@@ -29,7 +29,7 @@ package com.discovermotrails.securitybackend.constants;
 
 public interface SecurityConstants {
 
-    public static final String JWT_KEY = "[FILL WITH YOUR OWN STRING OF AT LEAST 38 RANDOM CHARACTERS]";
+    public static final String JWT_KEY = "[FILL WITH YOUR OWN STRING OF ATRANDOM CHARACTERS]";
     public static final String JWT_HEADER = "Authorization";
 
 }
