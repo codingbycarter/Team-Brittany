@@ -1,0 +1,41 @@
+{
+    "trails": [
+      {
+        "id": 1,
+        "name": "Ozark Trail",
+        "location": "Mark Twain National Forest",
+        "length": 350,
+        "difficulty": "Moderate",
+        "lat": 37.517,
+        "lon": -90.791
+      },
+      {
+        "id": 2,
+        "name": "Lewis and Clark Trail",
+        "location": "Weldon Spring Conservation Area",
+        "length": 7.5,
+        "difficulty": "Easy",
+        "lat": 38.723,
+        "lon": -90.670
+      },
+      {
+        "id": 3,
+        "name": "Mina Sauk Falls Trail",
+        "location": "Taum Sauk Mountain State Park",
+        "length": 3,
+        "difficulty": "Moderate",
+        "lat": 37.555,
+        "lon": -90.741
+      },
+      {
+        "id": 4,
+        "name": "White Connector Trail",
+        "location": "Castlewood State Park",
+        "length": 1.5,
+        "difficulty": "Easy",
+        "lat": 38.573,
+        "lon": -90.570
+      }
+    ]
+  }
+  
