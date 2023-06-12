@@ -42,6 +42,8 @@ public class ProjectSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
+//        http.csrf().disable();
+
         CsrfTokenRequestAttributeHandler requestHandler = new CsrfTokenRequestAttributeHandler();
         requestHandler.setCsrfRequestAttributeName("_csrf");
 
@@ -60,14 +62,17 @@ public class ProjectSecurityConfig {
                         configuration.setMaxAge(3600L);
                         return configuration;
                     }
-                }).and().csrf((csrf) -> csrf.csrfTokenRequestHandler(requestHandler).ignoringRequestMatchers("/register")
+                }).and().csrf((csrf) -> csrf.csrfTokenRequestHandler(requestHandler).ignoringRequestMatchers("/register" //)
+                        , "/api/**", "**") //TODO - remove this line and fix csrf token after pages work
                         .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()))
                 .addFilterAfter(new CsrfCookieFilter(), BasicAuthenticationFilter.class)
                 .addFilterAfter(new JWTTokenGeneratorFilter(), BasicAuthenticationFilter.class)
                 .addFilterBefore(new JWTTokenValidatorFilter(), BasicAuthenticationFilter.class)
                 .authorizeHttpRequests()
-                    .requestMatchers("/account","/user", "/secure").authenticated() // ADD SECURED PATHS HERE
-                    .requestMatchers("/index", "/register").permitAll() // ADD PUBLIC PATHS HERE
+                    .requestMatchers("/account","/user", "/secure").authenticated()
+                    .requestMatchers("/index", "/register" //) .permitAll()
+                            ,"/api/**", "**").permitAll() //TODO - fix csrf token after pages work
+//                    .anyRequest().permitAll() // TODO - delete before pushing, for local development only
                 .and().httpBasic();
         return http.build();
     }

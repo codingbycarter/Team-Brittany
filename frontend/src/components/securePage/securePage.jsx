@@ -3,6 +3,9 @@ import axios from "../../api/axios";
 import { Cookies } from 'react-cookie';
 import { useUserContext } from '../../context/userContext';
 
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import TrailList from "../../components/trail/TrailList.js";
+
 function SecurePage() {
     const [data, setData] = useState(null);    
     const [loading, setLoading] = useState(true);
@@ -43,6 +46,17 @@ function SecurePage() {
           <p>User Email: {user.email}</p>
         </div>
 
+        <div>
+            <nav>
+                <ul>
+                    <li><Link to="/trails">Browse Trails</Link></li>
+                    <li><Link to="/mynotes">My Notes</Link></li>
+                    <li><Link to="/mycomments">My Comments</Link></li>
+                    <li><Link to="/mybookmarks">My Bookmarks</Link></li>
+                </ul>
+            </nav>
+            
+        </div>
         </>
     );
 }

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { createContext, useState } from "react";
 import User from "./user";
+import { Cookies } from "react-cookie";
 
 export const userContext = createContext({
     user: null,
@@ -10,16 +11,22 @@ export const userContext = createContext({
 });
                   // id, displayName, email, isLoggedIn
 const USER = new User(0, "Guest",      "",      false); 
+const cookies = new Cookies();
 
 export function UserContextProvider({ children }) {
-    const [user, setUser] = useState(USER); //Set's the default user as a guest and not logged in
     if (localStorage.getItem("User") === null) {
-        localStorage.setItem("User", JSON.stringify(user)); //Stores the default user in local storage
+        localStorage.setItem("User", JSON.stringify(USER)); //Stores the default user in local storage
     }
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem("User"))); //Set's the default user as a guest and not logged in
 
     //This hook gets the User item from local storage and sets it in the local memory. Without this the user information won't persist
     useEffect(() => {
+        const token = cookies.get('Authorization');
+        if (!token) {
+            localStorage.setItem("User", JSON.stringify(USER));
+        }
         const data = localStorage.getItem("User");
+
         setUser(JSON.parse(data));
     }, [])
 
