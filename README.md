@@ -1,3 +1,11 @@
+# DiscoverMOTrails 
+
+
+## :technologist: Project Setup
+
+### React frontend
+1. Navigate to the `\frontend` folder and run `npm install`.
+
 ### Spring Security Backend
 1. Open the `\backend` folder in IntelliJ (or another IDEA of your choice). This is required
    for the IntelliJ to recognize the Gradle project to run.
