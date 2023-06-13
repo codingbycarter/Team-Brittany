@@ -114,7 +114,7 @@ The website's main router is located in `frontend/src/App.js`.
 <h2>Features</h2>
 <ul>
   <li>Display current weather information including temperature and weather description.</li>
-  <li>Interactive map displaying the user's location and weather data.</li>
+  <li>Interactive map displaying the user's selected location and weather data.</li>
 </ul>
 
 <h2>Technologies Used</h2>
@@ -127,7 +127,7 @@ The website's main router is located in `frontend/src/App.js`.
 <h2>Getting Started</h2>
 <ol>
   <li>Clone the repository:
-    <pre>git clone &lt;repository-url&gt;</pre>
+    <pre>git clone &lt;https://github.com/codingbycarter/Team-Brittany.git&gt;</pre>
   </li>
   <li>Navigate to the project directory:
     <pre>cd weather-app</pre>
