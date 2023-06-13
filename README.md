@@ -91,7 +91,7 @@ The website's main router is located in `frontend/src/App.js`.
 ```
 4. Be sure to update the ProjectSecurityConfig.java file in `backend/src/main/java/com.discovermotrails.securitybackend/config`.
     * Add secured paths to the comma separated list in the `.requestMatchers("/account","/user", "/secure").authenticated()` method
-    * Add public paths to the comma separated list in the `.requestMatchers("/index", "/register").permitAll()` mehtod
+    * Add public paths to the comma separated list in the `.requestMatchers("/index", "/register").permitAll()` method
 ```java
                 ...
         .authorizeHttpRequests()
@@ -106,5 +106,3 @@ The website's main router is located in `frontend/src/App.js`.
         <Link to="[YOUR PATH]">[NAV LINK NAME]</Link>
     </li>
 ```
-
-
