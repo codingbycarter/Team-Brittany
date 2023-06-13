@@ -107,40 +107,58 @@ The website's main router is located in `frontend/src/App.js`.
     </li>
 ```
 
-Weather App
-The Weather App is a web application that allows users to get the current weather information for their location. It utilizes the OpenWeatherMap API to fetch real-time weather data and displays it in a user-friendly manner.
+<h1>Weather App</h1>
 
-Features
-Display current weather information including temperature, humidity, wind speed, and weather description.
-Automatically detect user's location using geolocation.
-Search for weather information in different locations by entering the city name or ZIP code.
-Interactive map displaying the user's location and weather data.
-Technologies Used
-React: A JavaScript library for building user interfaces.
-OpenWeatherMap API: An API service for retrieving weather data.
-Google Maps API: An API service for displaying maps and geolocation.
-Getting Started
-To get a local copy of the Weather App up and running, follow these steps:
+<p>The Weather App is a web application that allows users to get the current weather information for their selected trail. It utilizes the OpenWeatherMap API to fetch real-time weather data and displays it in a user-friendly manner.</p>
 
-Clone the repository:
-![image](https://github.com/codingbycarter/Team-Brittany/assets/85805865/c968016d-84c7-4115-b7b1-fa5b9570e9a3)
-Navigate to the project directory:
-![image](https://github.com/codingbycarter/Team-Brittany/assets/85805865/de0e0be8-3efe-4eaf-8888-28f7dae9dea5)
-Install the dependencies:
-![image](https://github.com/codingbycarter/Team-Brittany/assets/85805865/356e2e75-20e4-44c3-b396-1daeefd208aa)
-Obtain API keys:
+<h2>Features</h2>
+<ul>
+  <li>Display current weather information including temperature and weather description.</li>
+  <li>Interactive map displaying the user's location and weather data.</li>
+</ul>
 
-Get an API key from OpenWeatherMap by signing up for an account.
-Get a Google Maps API key from the Google Cloud Console.
-Create a .env file in the project root directory and add your API keys:
-![image](https://github.com/codingbycarter/Team-Brittany/assets/85805865/8407529d-f1e0-4f52-a4cd-13ee92cce75a)
-Start the development server:
-![image](https://github.com/codingbycarter/Team-Brittany/assets/85805865/d09a5640-0180-434b-b501-e9bade388333)
-Open your web browser and visit http://localhost:3000 to see the Weather App.
+<h2>Technologies Used</h2>
+<ul>
+  <li>React: A JavaScript library for building user interfaces.</li>
+  <li>OpenWeatherMap API: An API service for retrieving weather data.</li>
+  <li>Google Maps API: An API service for displaying maps and geolocation.</li>
+</ul>
 
-Acknowledgements
-The Weather App was developed as part of a project for learning React.
-Thanks to OpenWeatherMap and Google Maps for providing the APIs used in this project.
+<h2>Getting Started</h2>
+<ol>
+  <li>Clone the repository:
+    <pre>git clone &lt;repository-url&gt;</pre>
+  </li>
+  <li>Navigate to the project directory:
+    <pre>cd weather-app</pre>
+  </li>
+  <li>Install the dependencies:
+    <pre>npm install</pre>
+  </li>
+  <li>Obtain API keys:
+    <ul>
+      <li>Get an API key from OpenWeatherMap by signing up for an account.</li>
+      <li>Get a Google Maps API key from the Google Cloud Console.</li>
+    </ul>
+  </li>
+  <li>Create a <code>.env</code> file in the project root directory and add your API keys:
+    <pre>
+      REACT_APP_WEATHER_API_KEY=29812600040df2c89c8f950823123751
+      REACT_APP_GOOGLE_MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
+    </pre>
+  </li>
+  <li>Start the development server:
+    <pre>npm start</pre>
+  </li>
+  <li>Open your web browser and visit <code>http://localhost:3000</code> to see the Weather App.</li>
+</ol>
+
+<p>License: This project is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for details.</p>
+
+<h2>Acknowledgements</h2>
+<p>The Weather App was developed as part of a project for learning React.</p>
+<p>Thanks to OpenWeatherMap and Google Maps for providing the APIs used in this project.</p>
+
 
 
 
