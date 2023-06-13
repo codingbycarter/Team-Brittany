@@ -143,7 +143,7 @@ The website's main router is located in `frontend/src/App.js`.
   </li>
   <li>Create a <code>.env</code> file in the project root directory and add your API keys:
     <pre>
-      REACT_APP_WEATHER_API_KEY=29812600040df2c89c8f950823123751
+      REACT_APP_WEATHER_API_KEY=YOUR_WEATHER_MAPS_API_KEY
       REACT_APP_GOOGLE_MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
     </pre>
   </li>
