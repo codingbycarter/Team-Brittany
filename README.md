@@ -120,6 +120,8 @@ The website's main router is located in `frontend/src/App.js`.
 <h2>Technologies Used</h2>
 <ul>
   <li>React: A JavaScript library for building user interfaces.</li>
+  <li>Node.js: A JavaScript runtime environment.</li>
+  <li>Axios: A promise-based HTTP client for making API requests.</li>
   <li>OpenWeatherMap API: An API service for retrieving weather data.</li>
   <li>Google Maps API: An API service for displaying maps and geolocation.</li>
 </ul>
