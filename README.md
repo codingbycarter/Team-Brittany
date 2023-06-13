@@ -106,3 +106,56 @@ The website's main router is located in `frontend/src/App.js`.
         <Link to="[YOUR PATH]">[NAV LINK NAME]</Link>
     </li>
 ```
+<h1>Weather App</h1>
+
+<p>The Weather App is a web application that allows users to get the current weather information for their selected trail. It utilizes the OpenWeatherMap API to fetch real-time weather data and displays it in a user-friendly manner.</p>
+
+<h2>Features</h2>
+<ul>
+  <li>Display current weather information including temperature and weather description.</li>
+  <li>Interactive map displaying the user's selected location and weather data.</li>
+</ul>
+
+<h2>Technologies Used</h2>
+<ul>
+  <li>React: A JavaScript library for building user interfaces.</li>
+  <li>Node.js: A JavaScript runtime environment.</li>
+  <li>Axios: A promise-based HTTP client for making API requests.</li>
+  <li>OpenWeatherMap API: An API service for retrieving weather data.</li>
+  <li>Google Maps API: An API service for displaying maps and geolocation.</li>
+</ul>
+
+<h2>Getting Started</h2>
+<ol>
+  <li>Clone the repository:
+    <pre>git clone &lt;https://github.com/codingbycarter/Team-Brittany.git&gt;</pre>
+  </li>
+  <li>Navigate to the project directory:
+    <pre>cd weather-app</pre>
+  </li>
+  <li>Install the dependencies:
+    <pre>npm install</pre>
+  </li>
+  <li>Obtain API keys:
+    <ul>
+      <li>Get an API key from OpenWeatherMap by signing up for an account.</li>
+      <li>Get a Google Maps API key from the Google Cloud Console.</li>
+    </ul>
+  </li>
+  <li>Create a <code>.env</code> file in the project root directory and add your API keys:
+    <pre>
+      REACT_APP_WEATHER_API_KEY=YOUR_WEATHER_API_KEY
+      REACT_APP_GOOGLE_MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY
+    </pre>
+  </li>
+  <li>Start the development server:
+    <pre>npm start</pre>
+  </li>
+  <li>Open your web browser and visit <code>http://localhost:3000</code> to see the Weather App.</li>
+</ol>
+
+
+<h2>Acknowledgements</h2>
+<p>The Weather App was developed as part of a project for learning React.</p>
+<p>Thanks to OpenWeatherMap and Google Maps for providing the APIs used in this project.</p>
+
