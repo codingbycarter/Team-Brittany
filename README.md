@@ -106,3 +106,41 @@ The website's main router is located in `frontend/src/App.js`.
         <Link to="[YOUR PATH]">[NAV LINK NAME]</Link>
     </li>
 ```
+
+Weather App
+The Weather App is a web application that allows users to get the current weather information for their location. It utilizes the OpenWeatherMap API to fetch real-time weather data and displays it in a user-friendly manner.
+
+Features
+Display current weather information including temperature, humidity, wind speed, and weather description.
+Automatically detect user's location using geolocation.
+Search for weather information in different locations by entering the city name or ZIP code.
+Interactive map displaying the user's location and weather data.
+Technologies Used
+React: A JavaScript library for building user interfaces.
+OpenWeatherMap API: An API service for retrieving weather data.
+Google Maps API: An API service for displaying maps and geolocation.
+Getting Started
+To get a local copy of the Weather App up and running, follow these steps:
+
+Clone the repository:
+![image](https://github.com/codingbycarter/Team-Brittany/assets/85805865/c968016d-84c7-4115-b7b1-fa5b9570e9a3)
+Navigate to the project directory:
+![image](https://github.com/codingbycarter/Team-Brittany/assets/85805865/de0e0be8-3efe-4eaf-8888-28f7dae9dea5)
+Install the dependencies:
+![image](https://github.com/codingbycarter/Team-Brittany/assets/85805865/356e2e75-20e4-44c3-b396-1daeefd208aa)
+Obtain API keys:
+
+Get an API key from OpenWeatherMap by signing up for an account.
+Get a Google Maps API key from the Google Cloud Console.
+Create a .env file in the project root directory and add your API keys:
+![image](https://github.com/codingbycarter/Team-Brittany/assets/85805865/8407529d-f1e0-4f52-a4cd-13ee92cce75a)
+Start the development server:
+![image](https://github.com/codingbycarter/Team-Brittany/assets/85805865/d09a5640-0180-434b-b501-e9bade388333)
+Open your web browser and visit http://localhost:3000 to see the Weather App.
+
+Acknowledgements
+The Weather App was developed as part of a project for learning React.
+Thanks to OpenWeatherMap and Google Maps for providing the APIs used in this project.
+
+
+
